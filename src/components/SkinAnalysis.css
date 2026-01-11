@@ -1,0 +1,169 @@
+.skin-analysis {
+  background: var(--cream);
+}
+
+.section-header {
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.concern-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.concern-btn {
+  padding: 14px 32px;
+  border: 2px solid var(--primary-aqua);
+  background: var(--white);
+  color: var(--primary-aqua);
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+.concern-btn:hover {
+  background: var(--secondary-aqua);
+  border-color: var(--secondary-aqua);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.concern-btn.active {
+  background: var(--primary-aqua);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(77, 184, 196, 0.3);
+}
+
+.concern-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.concern-content h3 {
+  color: var(--primary-aqua);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.concern-description {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.treatments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.treatment-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+  background: var(--cream);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.treatment-item:hover {
+  transform: translateX(8px);
+}
+
+.treatment-number {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary-aqua), var(--secondary-aqua));
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.treatment-info h4 {
+  color: var(--charcoal);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-family: var(--font-heading);
+}
+
+.treatment-info p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.concern-cta {
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .concern-buttons {
+    gap: 12px;
+  }
+
+  .concern-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    min-width: 120px;
+  }
+
+  .concern-content {
+    padding: 30px 20px;
+  }
+
+  .treatment-item {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .treatment-number {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .treatment-info h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .concern-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .concern-btn {
+    width: 100%;
+  }
+}

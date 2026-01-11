@@ -1,0 +1,156 @@
+.experience-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.experience-images {
+  position: relative;
+  height: 600px;
+}
+
+.image-main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.image-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-accent {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  border: 8px solid var(--cream);
+}
+
+.image-accent img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-text h2 {
+  color: var(--charcoal);
+  margin-bottom: 20px;
+}
+
+.experience-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: var(--warm-gray);
+}
+
+.differentiators {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.differentiator {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.diff-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-aqua), var(--secondary-aqua));
+  color: var(--gold);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 15px rgba(77, 184, 196, 0.2);
+}
+
+.diff-content h4 {
+  color: var(--charcoal);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.diff-content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .experience-content {
+    gap: 60px;
+  }
+
+  .experience-images {
+    height: 500px;
+  }
+
+  .image-accent {
+    width: 200px;
+    height: 200px;
+    bottom: -30px;
+    right: -30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .experience-images {
+    height: 400px;
+    order: 2;
+  }
+
+  .experience-text {
+    order: 1;
+  }
+
+  .image-accent {
+    width: 150px;
+    height: 150px;
+    bottom: -20px;
+    right: -20px;
+    border: 6px solid var(--cream);
+  }
+
+  .differentiators {
+    gap: 24px;
+  }
+
+  .differentiator {
+    gap: 16px;
+  }
+
+  .diff-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .diff-content h4 {
+    font-size: 1.1rem;
+  }
+}
