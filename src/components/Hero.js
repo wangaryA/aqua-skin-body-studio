@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Hero.css';
+import heroBanner from '../assets/hero-banner.png';
 
 function Hero({ scrolled }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -47,33 +48,32 @@ function Hero({ scrolled }) {
         </div>
       </nav>
 
-      <section className="hero" id="home">
+      <section className="hero" id="home" style={{ backgroundImage: `url(${heroBanner})` }}>
         <div className="hero-overlay"></div>
-        <div className="hero-content container">
-          <div className="hero-text">
-            <h1 className="fade-in-up">Your Personal Sanctuary for Radiant Skin</h1>
-            <p className="hero-subtitle fade-in-up">
-              Boutique sanctuary dedicated to luxurious facials, restorative body therapy, and personalized skin wellness
-            </p>
-            <div className="hero-ctas fade-in-up">
-              <button
-                className="btn btn-primary"
-                onClick={() => scrollToSection('booking')}
-              >
-                Book Your Escape
-              </button>
-              <button
-                className="btn btn-secondary"
-                onClick={() => scrollToSection('treatments')}
-              >
-                Discover Treatments
-              </button>
-            </div>
-          </div>
-        </div>
 
         <div className="trust-indicators">
           <div className="container">
+            <div className="hero-text">
+              <h1 className="fade-in-up">Your Personal Sanctuary for Radiant Skin</h1>
+              <p className="hero-subtitle fade-in-up">
+                Boutique sanctuary dedicated to luxurious facials, restorative body therapy, and personalized skin wellness
+              </p>
+              <div className="hero-ctas fade-in-up">
+                <button
+                  className="btn btn-primary"
+                  onClick={() => scrollToSection('booking')}
+                >
+                  Book Your Escape
+                </button>
+                <button
+                  className="btn btn-secondary"
+                  onClick={() => scrollToSection('treatments')}
+                >
+                  Discover Treatments
+                </button>
+              </div>
+            </div>
+
             <div className="indicators-row">
               <div className="indicator">
                 <div className="indicator-icon">✦</div>
