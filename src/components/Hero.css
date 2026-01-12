@@ -90,16 +90,17 @@
 
 /* Hero Section */
 .hero {
-  min-height: 170vh;
+  min-height: calc(790px + 400px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  background-size: contain;
-  background-position: center top;
+  background-size: 100% 790px;
+  background-position: center 10px;
   background-repeat: no-repeat;
-  padding-top: 80px;
+  padding-top: 0;
+  margin-top: 0;
   padding-bottom: 0;
 }
 
@@ -221,9 +222,12 @@
   }
 
   .hero {
-    min-height: 150vh;
-    padding-top: 100px;
+    min-height: calc(580px + 400px);
+    padding-top: 0;
+    margin-top: 0;
     padding-bottom: 0;
+    background-size: 100% 580px;
+    background-position: center 10px;
   }
 
   .hero-ctas {
