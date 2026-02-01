@@ -1,0 +1,181 @@
+/* Treatments Page Hero */
+.treatments-page-hero {
+  background: linear-gradient(135deg, var(--secondary-aqua) 0%, var(--cream) 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.treatments-page-hero h1 {
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+
+.treatments-page-hero .subtitle {
+  color: var(--warm-gray);
+  font-size: 1.25rem;
+}
+
+/* Treatments Content */
+.treatments-page-content {
+  padding: 60px 0 80px;
+  background: var(--white);
+}
+
+.treatments-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.treatments-intro p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--charcoal);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Treatment Category */
+.treatment-category {
+  margin-bottom: 60px;
+}
+
+.treatment-category h2 {
+  color: var(--primary-aqua);
+  font-size: 1.75rem;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--secondary-aqua);
+}
+
+.treatment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.treatment-item {
+  background: var(--cream);
+  padding: 30px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.treatment-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.treatment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.treatment-header h3 {
+  color: var(--charcoal);
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.treatment-meta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.treatment-meta .duration {
+  color: var(--warm-gray);
+  font-size: 0.95rem;
+}
+
+.treatment-meta .price {
+  color: var(--primary-aqua);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.treatment-item p {
+  color: var(--charcoal);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Treatments Note */
+.treatments-note {
+  background: var(--secondary-aqua);
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.treatments-note h3 {
+  color: var(--charcoal);
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+
+.treatments-note ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.treatments-note li {
+  color: var(--charcoal);
+  padding: 8px 0 8px 28px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.treatments-note li::before {
+  content: '•';
+  position: absolute;
+  left: 10px;
+  color: var(--primary-aqua);
+  font-weight: bold;
+}
+
+/* Treatments CTA */
+.treatments-cta {
+  padding: 80px 0;
+  background: var(--cream);
+  text-align: center;
+}
+
+.treatments-cta h2 {
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+
+.treatments-cta p {
+  color: var(--warm-gray);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .treatments-page-hero {
+    padding: 60px 0;
+  }
+
+  .treatments-page-content {
+    padding: 40px 0 60px;
+  }
+
+  .treatment-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .treatment-item {
+    padding: 24px;
+  }
+
+  .treatments-cta {
+    padding: 60px 0;
+  }
+}

@@ -1,0 +1,250 @@
+/* Contact Hero */
+.contact-hero {
+  background: linear-gradient(135deg, var(--secondary-aqua) 0%, var(--cream) 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.contact-hero h1 {
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+
+.contact-hero .subtitle {
+  color: var(--warm-gray);
+  font-size: 1.25rem;
+}
+
+/* Contact Content */
+.contact-content {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+}
+
+/* Contact Info */
+.contact-info h2 {
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+
+.contact-intro {
+  color: var(--warm-gray);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 16px;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  background: var(--secondary-aqua);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-text h3 {
+  color: var(--charcoal);
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.contact-text p {
+  color: var(--warm-gray);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Social Links */
+.social-links h3 {
+  color: var(--charcoal);
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  padding: 10px 20px;
+  background: var(--primary-aqua);
+  color: var(--white);
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.social-icon:hover {
+  background: var(--charcoal);
+}
+
+/* Contact Form */
+.contact-form-section {
+  background: var(--cream);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.contact-form h2 {
+  color: var(--charcoal);
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--charcoal);
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--charcoal);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-aqua);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-form .btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.05rem;
+}
+
+/* Form Success */
+.form-success {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--primary-aqua);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto 24px;
+}
+
+.form-success h2 {
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+
+.form-success p {
+  color: var(--warm-gray);
+  line-height: 1.7;
+}
+
+/* Map Section */
+.map-section {
+  padding: 60px 0 80px;
+  background: var(--cream);
+}
+
+.map-section h2 {
+  text-align: center;
+  color: var(--charcoal);
+  margin-bottom: 30px;
+}
+
+.map-container {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 60px 0;
+  }
+
+  .contact-content {
+    padding: 60px 0;
+  }
+
+  .contact-form-section {
+    padding: 30px 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .map-section {
+    padding: 40px 0 60px;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+}

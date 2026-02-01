@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 function Footer() {
@@ -29,13 +30,6 @@ function Footer() {
     }, 3000);
   };
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <footer className="footer">
       <div className="container">
@@ -45,6 +39,12 @@ function Footer() {
             <p className="footer-tagline">
               Your sanctuary for radiant skin and holistic wellness.
             </p>
+            <div className="contact-info">
+              <p>123 Wellness Boulevard, Suite 100</p>
+              <p>San Francisco, CA 94102</p>
+              <p>(415) 555-0123</p>
+              <p>hello@aquaskinbody.com</p>
+            </div>
             <div className="social-links">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -56,33 +56,26 @@ function Footer() {
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
               </a>
-              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
-                </svg>
-              </a>
             </div>
           </div>
 
           <div className="footer-column">
             <h4>Quick Links</h4>
             <ul className="footer-links">
-              <li><a href="#treatments" onClick={(e) => { e.preventDefault(); scrollToSection('treatments'); }}>Services</a></li>
-              <li><a href="#skin-analysis" onClick={(e) => { e.preventDefault(); scrollToSection('skin-analysis'); }}>Skin Analysis</a></li>
-              <li><a href="#experience" onClick={(e) => { e.preventDefault(); scrollToSection('experience'); }}>About Us</a></li>
-              <li><a href="#testimonials" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>Reviews</a></li>
-              <li><a href="#booking" onClick={(e) => { e.preventDefault(); scrollToSection('booking'); }}>Book Now</a></li>
+              <li><Link to="/overview">About Us</Link></li>
+              <li><Link to="/treatments">Treatments</Link></li>
+              <li><Link to="/enhancements">Enhancements</Link></li>
+              <li><Link to="/products">Products</Link></li>
+              <li><Link to="/appointments">Book Appointment</Link></li>
             </ul>
           </div>
 
           <div className="footer-column">
-            <h4>Policies</h4>
+            <h4>Resources</h4>
             <ul className="footer-links">
-              <li><a href="#privacy">Privacy Policy</a></li>
-              <li><a href="#terms">Terms of Service</a></li>
-              <li><a href="#cancellation">Cancellation Policy</a></li>
-              <li><a href="#gift">Gift Cards</a></li>
-              <li><a href="#membership">Membership</a></li>
+              <li><Link to="/gift-certificate">Gift Certificates</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/appointments">Cancellation Policy</Link></li>
             </ul>
           </div>
 

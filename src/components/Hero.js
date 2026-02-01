@@ -1,53 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 import heroBanner from '../assets/hero-banner.png';
 
-function Hero({ scrolled }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setMobileMenuOpen(false);
-    }
-  };
-
+function Hero() {
   return (
     <div className="hero-wrapper">
-      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-        <div className="container navbar-container">
-          <div className="logo">
-            <h2>Aqua Skin & Body Studio</h2>
-          </div>
-
-          <button
-            className="mobile-menu-toggle"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-
-          <ul className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
-            <li><a href="#treatments" onClick={(e) => { e.preventDefault(); scrollToSection('treatments'); }}>Services</a></li>
-            <li><a href="#experience" onClick={(e) => { e.preventDefault(); scrollToSection('experience'); }}>About</a></li>
-            <li><a href="#testimonials" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>Testimonials</a></li>
-            <li><a href="#booking" onClick={(e) => { e.preventDefault(); scrollToSection('booking'); }}>Contact</a></li>
-            <li>
-              <button
-                className="btn btn-primary btn-nav"
-                onClick={() => scrollToSection('booking')}
-              >
-                Book Now
-              </button>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
       <section className="hero" id="home" style={{ backgroundImage: `url(${heroBanner})` }}>
         <div className="hero-overlay"></div>
 
@@ -59,18 +17,12 @@ function Hero({ scrolled }) {
                 Boutique sanctuary dedicated to luxurious facials, restorative body therapy, and personalized skin wellness
               </p>
               <div className="hero-ctas fade-in-up">
-                <button
-                  className="btn btn-primary"
-                  onClick={() => scrollToSection('booking')}
-                >
+                <Link to="/appointments" className="btn btn-primary">
                   Book Your Escape
-                </button>
-                <button
-                  className="btn btn-secondary"
-                  onClick={() => scrollToSection('treatments')}
-                >
+                </Link>
+                <Link to="/treatments" className="btn btn-secondary">
                   Discover Treatments
-                </button>
+                </Link>
               </div>
             </div>
 

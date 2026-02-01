@@ -1,0 +1,186 @@
+/* Enhancements Hero */
+.enhancements-hero {
+  background: linear-gradient(135deg, var(--gold) 0%, #E8C547 50%, var(--cream) 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.enhancements-hero h1 {
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+
+.enhancements-hero .subtitle {
+  color: var(--charcoal);
+  font-size: 1.25rem;
+  opacity: 0.8;
+}
+
+/* Enhancements Intro */
+.enhancements-intro {
+  padding: 60px 0;
+  background: var(--white);
+  text-align: center;
+}
+
+.enhancements-intro p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--charcoal);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Enhancements Grid */
+.enhancements-grid-section {
+  padding: 40px 0 80px;
+  background: var(--cream);
+}
+
+.enhancement-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.enhancement-card.reverse {
+  direction: rtl;
+}
+
+.enhancement-card.reverse > * {
+  direction: ltr;
+}
+
+.enhancement-image {
+  height: 100%;
+  min-height: 400px;
+}
+
+.enhancement-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.enhancement-content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.enhancement-content h2 {
+  color: var(--primary-aqua);
+  margin-bottom: 16px;
+  font-size: 1.75rem;
+}
+
+.enhancement-desc {
+  color: var(--charcoal);
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.enhancement-treatments {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.enhancement-treatment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  background: var(--cream);
+  border-radius: 8px;
+}
+
+.treatment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.treatment-name {
+  color: var(--charcoal);
+  font-weight: 600;
+}
+
+.treatment-desc {
+  color: var(--warm-gray);
+  font-size: 0.9rem;
+}
+
+.treatment-price {
+  color: var(--primary-aqua);
+  font-weight: 600;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  margin-left: 20px;
+}
+
+/* Enhancements CTA */
+.enhancements-cta {
+  padding: 80px 0;
+  background: var(--white);
+  text-align: center;
+}
+
+.enhancements-cta h2 {
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+
+.enhancements-cta p {
+  color: var(--warm-gray);
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .enhancement-card,
+  .enhancement-card.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .enhancement-image {
+    min-height: 300px;
+  }
+
+  .enhancement-content {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .enhancements-hero {
+    padding: 60px 0;
+  }
+
+  .enhancements-intro {
+    padding: 40px 0;
+  }
+
+  .enhancement-treatment-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .treatment-price {
+    margin-left: 0;
+  }
+
+  .enhancements-cta {
+    padding: 60px 0;
+  }
+}

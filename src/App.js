@@ -1,35 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Hero from './components/Hero';
-import SkinAnalysis from './components/SkinAnalysis';
-import Treatments from './components/Treatments';
-import Experience from './components/Experience';
-import Testimonials from './components/Testimonials';
-import Booking from './components/Booking';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import Overview from './pages/Overview';
+import Products from './pages/Products';
+import TreatmentsPage from './pages/TreatmentsPage';
+import Enhancements from './pages/Enhancements';
+import Appointments from './pages/Appointments';
+import Contact from './pages/Contact';
+import GiftCertificate from './pages/GiftCertificate';
 
 function App() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div className="App">
-      <Hero scrolled={scrolled} />
-      <SkinAnalysis />
-      <Treatments />
-      <Experience />
-      <Testimonials />
-      <Booking />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/overview" element={<Overview />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/treatments" element={<TreatmentsPage />} />
+          <Route path="/enhancements" element={<Enhancements />} />
+          <Route path="/appointments" element={<Appointments />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/gift-certificate" element={<GiftCertificate />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
